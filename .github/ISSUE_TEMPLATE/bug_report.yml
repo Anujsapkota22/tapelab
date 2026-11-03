@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a reproducible engine, data validation, or report issue.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Please use synthetic or redistributable data. Never include credentials or private market data."
+  - type: input
+    id: version
+    attributes:
+      label: TapeLab version and Python version
+      placeholder: "TapeLab 0.1.0, Python 3.12"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include a small input and strategy that reproduce the behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Relevant assumptions
+      description: Note bar frequency, timezone, fees, slippage, and any relevant execution timing.
+    validations:
+      required: false
+
